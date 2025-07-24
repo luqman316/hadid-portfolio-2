@@ -35,7 +35,7 @@ function Summary() {
               autoPlay
               muted
               loop
-              className="min-w-auto min-h-auto mx-auto mb-4 rounded-lg"
+              className="min-w-auto min-h-auto mx-auto mb-4 rounded-lg  w-full h-auto md:h-full object-cover  cursor-pointer"
               src="/ab1.mp4"
             >
               Your browser does not support the video tag.

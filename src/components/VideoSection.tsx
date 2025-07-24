@@ -22,7 +22,7 @@ function VideoSection() {
         autoPlay
         muted
         loop
-        className="rounded-l-full w-full h-full object-cover aspect-video cursor-pointer"
+        className="rounded-l-full w-full h-auto md:h-full object-cover  cursor-pointer"
         src={videos[currentIndex]}
         key={videos[currentIndex]}
         onClick={() =>

@@ -94,7 +94,7 @@ function CoreExpertise() {
               <motion.h1
                 animate={{ y: [0, -12, 0] }}
                 transition={{
-                  duration: 0.8,
+                  duration: 0.4,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
@@ -112,7 +112,7 @@ function CoreExpertise() {
               <motion.p
                 animate={{ y: [0, -10, 0] }}
                 transition={{
-                  duration: 1,
+                  duration: 0.8,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
