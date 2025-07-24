@@ -9,17 +9,17 @@ function Summary() {
              <div className="grid justify-center items-center ">
               <div className=" p-2  grid justify-center items-center gap-4">
                 <div>
-                  <h2 className=" italic animate-pulse hover:animate-none ">
+                  {/* <h2 className=" italic animate-pulse hover:animate-none ">
                     The perfect for your game development needs
-                  </h2>
+                  </h2> */}
                 </div>
                 <div className="px-14">
                   <Image
                     src="/about4.jpg"
                     alt="Background Hadid"
-                    width={200}
-                    height={200}
-                    className="flex justify-center items-center rounded-full bg-blend-multiply bg-transparent"
+                    width={300}
+                    height={300}
+                    className="flex justify-center items-center rounded-lg bg-blend-multiply bg-transparent"
                   />
                 </div>
               </div>

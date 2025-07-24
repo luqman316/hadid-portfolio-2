@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FaBolt,
   FaCode,
@@ -47,32 +48,39 @@ function CoreExpertise() {
         <div className="container mx-auto px-4 py-8 text-white">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
             {/* core expertise */}
-            <div className="row-start-2 col-start-1 md:row-start-2 md:col-start-1 flex flex-col justify-center">
-              <div className=" w-full  max-w-2xl space-y-1 mx-auto md:mx-0">
-                <h1 className="text-3xl sm:text-4xl mb-1 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
-                  Core Expertise
-                </h1>
-                <div className="grid gap-1 sm:gap-1 grid-cols-1 sm:grid-cols-2 mt-4">
-                  {highlights.map((item, index) => (
-                    <div
-                      key={index}
-                      className="p-1 sm:p-1 rounded-2xl hover:cursor-pointer group w-full"
-                    >
-                      <div className="mb-1 flex items-center justify-center">
-                        <span className="bg-white/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-200">
-                          {item.icon}
-                        </span>
-                      </div>
-                      <h3 className="text-base sm:text-lg font-bold mb-1 text-indigo-300 group-hover:text-indigo-400 text-center">
-                        {item.title}
-                      </h3>
+            <div className="flex flex-col justify-center w-full max-w-2xl space-y-1 mx-auto md:mx-0">
+              <h1 className="text-3xl sm:text-4xl mb-1 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
+                Core Expertise
+              </h1>
+              <div className="grid gap-1 sm:gap-1 grid-cols-1 sm:grid-cols-2 mt-4">
+                {highlights.map((item, index) => (
+                  <div
+                    key={index}
+                    className="p-1 sm:p-1 rounded-2xl hover:cursor-pointer group w-full"
+                  >
+                    <div className="mb-1 flex items-center justify-center">
+                      <span className="bg-white/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-200">
+                        {item.icon}
+                      </span>
                     </div>
-                  ))}
-                </div>
+                    <h3 className="text-base sm:text-lg font-bold mb-1 text-indigo-300 group-hover:text-indigo-400 text-center">
+                      {item.title}
+                    </h3>
+                  </div>
+                ))}
               </div>
             </div>
+            <div className="flex flex-col justify-center items-center w-full animate-pulse">
+              <Image
+                src="/core-12-bg.png"
+                alt="Background Hadid"
+                width={300}
+                height={300}
+                className="rounded-md bg-blend-multiply bg-transparent  mx-auto"
+                priority
+              />
+            </div>
           </div>
-        
         </div>
       </div>
     </>
