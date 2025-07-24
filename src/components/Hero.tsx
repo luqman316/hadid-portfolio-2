@@ -8,7 +8,7 @@ import VideoSection from "./VideoSection";
 function Hero() {
   return (
     <>
-      <div className="bg-gradient-to-r from-gray-800 to-gray-400 min-h-[400px]  text-black py-5">
+      <div className="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-00 min-h-[400px]  text-black py-5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-5 mt-5 items-center">
             {/* first div  */}

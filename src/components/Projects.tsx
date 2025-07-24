@@ -37,6 +37,21 @@ function Projects() {
               title="SkyBorne Legacy - MMORPG - Mutliplayer"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc."
             />
+             <ProjectLayout
+              image="/game6/img1.jpg"
+              title="Funny Shooter Bro"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc."
+            />
+             <ProjectLayout
+              image="/game7/img1.jpg"
+              title="CyAnimation-Beatemup-Royale"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc."
+            />
+             <ProjectLayout
+              image="/game8/img1.jpg"
+              title="Satan's Revival"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nunc, nec aliquam nunc nisl sit amet nunc."
+            />
           </div>
         </div>
       </div>

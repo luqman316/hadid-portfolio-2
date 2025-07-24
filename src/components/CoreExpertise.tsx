@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
 import {
   FaBolt,
   FaCode,
@@ -59,7 +60,7 @@ function CoreExpertise() {
                     className="p-1 sm:p-1 rounded-2xl hover:cursor-pointer group w-full"
                   >
                     <div className="mb-1 flex items-center justify-center">
-                      <span className="bg-white/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-200">
+                      <span className="bg-white/10 rounded-full animate-pulse hover:animate-none p-3 group-hover:scale-110 transition-transform duration-200">
                         {item.icon}
                       </span>
                     </div>
@@ -70,7 +71,8 @@ function CoreExpertise() {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center w-full animate-pulse">
+            {/* second */}
+            {/* <div className="flex flex-col justify-center items-center w-full animate-pulse">
               <Image
                 src="/core-12-bg.png"
                 alt="Background Hadid"
@@ -79,7 +81,51 @@ function CoreExpertise() {
                 className="rounded-md bg-blend-multiply bg-transparent  mx-auto"
                 priority
               />
-            </div>
+              <h1>Core</h1>
+              <p>expertise</p>
+            </div> */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="flex flex-col justify-center items-center w-full space-y-2 p-4"
+            >
+              {/* Core */}
+              <motion.h1
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: -2,
+                  transition: { duration: 0.2 },
+                }}
+                className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-red-500 to-orange-500 drop-shadow-md hover:drop-shadow-2xl transition-all duration-300"
+              >
+                Core
+              </motion.h1>
+
+              {/* Expertise */}
+              <motion.p
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 2,
+                  transition: { duration: 0.2 },
+                }}
+                className="text-xl md:text-2xl font-semibold text-gray-700 hover:text-rose-600 transition-all duration-300 tracking-wider uppercase"
+              >
+                expertise
+              </motion.p>
+            </motion.div>
           </div>
         </div>
       </div>
