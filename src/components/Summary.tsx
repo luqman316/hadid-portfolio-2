@@ -90,6 +90,7 @@ function Summary() {
                     preload="none"
                     autoPlay
                     muted
+                    // controls
                     loop
                     className="w-full h-full object-cover"
                     src="/ab1.mp4"

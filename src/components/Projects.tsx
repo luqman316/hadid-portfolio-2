@@ -53,7 +53,7 @@ function Projects() {
       transition={{ duration: 0.5 }}
       className="container mx-auto px-2 sm:px-4 py-6 sm:py-8 text-white"
     >
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center sm:text-left mb-4 sm:mb-6">
+      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-2 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
         Projects
       </h1>
       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-8">

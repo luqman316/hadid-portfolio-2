@@ -1,6 +1,7 @@
 import CoreExpertise from "@/components/CoreExpertise";
 import Experince from "@/components/Experince";
 import Hero from "@/components/Hero";
+import ProjectNum from "@/components/ProjectNum";
 import Projects from "@/components/Projects";
 import Summary from "@/components/Summary";
 // import Summary from "@/components/Summary";
@@ -15,14 +16,14 @@ function MainPage() {
         <CoreExpertise />{" "}
         <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
         <Experince />
-        <br />
-        <br />
       </div>{" "}
       <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
-      <br />
+    
+      <ProjectNum/>
+      <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
       <Projects />
-      <br /> <br />
-      {/* <h1>dqwded</h1> */}
+      <br /> 
+      {/* <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" /> */}
 
       
     </>

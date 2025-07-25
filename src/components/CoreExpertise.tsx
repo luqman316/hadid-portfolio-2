@@ -6,31 +6,34 @@ import {
   FaGamepad,
   FaNetworkWired,
   FaPuzzlePiece,
+  FaUnity,
   FaUsers,
 } from "react-icons/fa";
+import { SiUnrealengine, SiVirtualbox } from "react-icons/si";
 
 const highlights = [
   {
-    title: "Game Architecture & Scalability",
+    title: "Unity Game Development",
     description: "Built frameworks powering successful games for years.",
     icon: (
-      <FaGamepad className="text-2xl sm:text-3xl lg:text-4xl text-indigo-600" />
+      <FaUnity className="text-2xl sm:text-3xl lg:text-4xl text-gray-950" />
     ),
   },
   {
-    title: "Game Optimization & Performance",
-    description: "Ensured smooth gameplay, even on low-tier devices.",
+    title: "Unreal Engine Development",
+    description: "Built frameworks powering successful games for years.",
     icon: (
-      <FaBolt className="text-2xl sm:text-3xl lg:text-4xl text-yellow-500" />
+      <SiUnrealengine className="text-2xl sm:text-3xl lg:text-4xl text-slate-100" />
     ),
   },
   {
-    title: "Multiplayer Game Development",
-    description: "Expertise in Photon PUN2, Mirror, and Netcode.",
+    title: "AR/VR Development",
+    description: "Established boilerplates and coding guidelines.",
     icon: (
-      <FaNetworkWired className="text-2xl sm:text-3xl lg:text-4xl text-blue-500" />
+      <SiVirtualbox className="text-2xl sm:text-3xl lg:text-4xl text-blue-500" />
     ),
   },
+
   {
     title: "Plugin & SDK Integration",
     description: "Troubleshooting and optimizing third-party tools.",
@@ -43,6 +46,27 @@ const highlights = [
     description: "Established boilerplates and coding guidelines.",
     icon: (
       <FaCode className="text-2xl sm:text-3xl lg:text-4xl text-green-500" />
+    ),
+  },
+  {
+    title: "Multiplayer Game Development",
+    description: "Expertise in Photon PUN2, Mirror, and Netcode.",
+    icon: (
+      <FaNetworkWired className="text-2xl sm:text-3xl lg:text-4xl text-blue-500" />
+    ),
+  },
+  {
+    title: "Game Architecture & Scalability",
+    description: "Built frameworks powering successful games for years.",
+    icon: (
+      <FaGamepad className="text-2xl sm:text-3xl lg:text-4xl text-indigo-600" />
+    ),
+  },
+  {
+    title: "Game Optimization & Performance",
+    description: "Ensured smooth gameplay, even on low-tier devices.",
+    icon: (
+      <FaBolt className="text-2xl sm:text-3xl lg:text-4xl text-yellow-500" />
     ),
   },
   {
@@ -68,7 +92,7 @@ function CoreExpertise() {
             Core Expertise
           </h1>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 md:gap-6 mt-4 sm:mt-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-6 mt-4 sm:mt-6">
             {highlights.map((item, index) => (
               <motion.div
                 key={index}
@@ -81,7 +105,7 @@ function CoreExpertise() {
                   delay: index * 0.08,
                   ease: "easeOut",
                 }}
-                className="p-2 sm:p-3 rounded-2xl group hover:bg-white/10 transition-all shadow-md hover:shadow-lg hover:shadow-indigo-500/20"
+                className="p-2 sm:p-3 rounded-2xl  group hover:bg-white/10 transition-all shadow-md hover:shadow-lg hover:shadow-indigo-500/20"
               >
                 <div className="mb-2 flex items-center justify-center">
                   <span className="bg-white/10 rounded-full p-2 sm:p-3 group-hover:scale-110 transition-transform duration-200">
