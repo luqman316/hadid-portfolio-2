@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 function VideoSection() {
-  const videos = ["/test2.mp4", "/test3.mp4", "/test4.mp4"];
+  const videos = ["/test2.mp4", "/test3.mp4", "/test4.mp4", "/test7.mp4"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 

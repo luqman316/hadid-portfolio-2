@@ -3,6 +3,7 @@ import Experince from "@/components/Experince";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Summary from "@/components/Summary";
+// import Summary from "@/components/Summary";
 
 function MainPage() {
   return (
@@ -22,8 +23,14 @@ function MainPage() {
       <Projects />
       <br /> <br />
       {/* <h1>dqwded</h1> */}
+
+      
     </>
   );
 }
 
 export default MainPage;
+
+
+
+// update the image locations @ is src as default to update to root change the tsconfig.ts paths
