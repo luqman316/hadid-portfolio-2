@@ -43,20 +43,20 @@ const highlights = [
 function About2() {
   return (
     <>
-      <div className="">
-        <div className="container mx-auto px-4 py-8 ">
-          <div className="bg-gradient-to-r from-gray-800 to-gray-500 p-4 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 md:grid-rows-3 gap-1 ">
+      <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 flex items-center justify-center py-4 px-2 sm:px-0">
+        <div className="container mx-auto max-w-4xl px-2 sm:px-4 py-6 sm:py-8">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-500 p-2 sm:p-4 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 md:grid-rows-3 gap-2 sm:gap-4">
               {/* Summary: Top Right */}
               <div className="row-start-1 col-start-1 md:row-start-1 md:col-start-2 flex flex-col justify-center mt-0 md:mt-0">
                 <div className="w-full max-w-2xl mx-auto md:mx-0 p-1">
-                  <h1 className="text-3xl sm:text-4xl font-extrabold underline underline-offset-8 mb-1 ">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold underline underline-offset-8 mb-1 ">
                     Summary
                   </h1>
-                  <h2 className="text-base sm:text-lg font-bold text-black mb-1 mt-1">
+                  <h2 className="text-sm sm:text-base md:text-lg font-bold text-black mb-1 mt-1">
                     Senior Game Developer | AI Enthusiast | Team Leader
                   </h2>
-                  <p className="text-sm sm:text-lg font-bold mb-1 text-indigo-300 group-hover:text-indigo-400 text-balance mt-1 transition-colors duration-200">
+                  <p className="text-xs sm:text-sm md:text-lg font-bold mb-1 text-indigo-300 group-hover:text-indigo-400 text-balance mt-1 transition-colors duration-200">
                     With 7+ years of experience in Unity3D and C#, I specialize
                     in game programming, scalable architectures, and performance
                     optimization. I’ve worked across mobile, PC, and multiplayer
@@ -68,21 +68,21 @@ function About2() {
               {/* Core Expertise: Center Left */}
               <div className="row-start-2 col-start-1 md:row-start-2 md:col-start-1 flex flex-col justify-center">
                 <div className="p-1 w-full max-w-2xl space-y-1 mx-auto md:mx-0">
-                  <h1 className="text-3xl sm:text-4xl mb-1 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl mb-1 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
                     Core Expertise
                   </h1>
-                  <div className="grid gap-1 sm:gap-1 grid-cols-1 sm:grid-cols-2">
+                  <div className="grid gap-2 sm:gap-3 grid-cols-1 xs:grid-cols-2">
                     {highlights.map((item, index) => (
                       <div
                         key={index}
-                        className="p-1 sm:p-1 rounded-2xl hover:cursor-pointer group w-full"
+                        className="p-1 sm:p-2 rounded-2xl hover:cursor-pointer group w-full"
                       >
                         <div className="mb-1 flex items-center justify-center">
-                          <span className="bg-white/10 rounded-full p-3 group-hover:scale-110 transition-transform duration-200">
+                          <span className="bg-white/10 rounded-full p-2 sm:p-3 group-hover:scale-110 transition-transform duration-200">
                             {item.icon}
                           </span>
                         </div>
-                        <h3 className="text-base sm:text-lg font-bold mb-1 text-indigo-300 group-hover:text-indigo-400 text-center">
+                        <h3 className="text-xs sm:text-base md:text-lg font-bold mb-1 text-indigo-300 group-hover:text-indigo-400 text-center">
                           {item.title}
                         </h3>
                       </div>
@@ -90,14 +90,14 @@ function About2() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Professional Experience: Bottom Right */}
               <div className="row-start-3 col-start-1 md:row-start-3 md:col-start-2 flex flex-col justify-center">
                 <div className="p-1 w-full max-w-2xl mt-0 mx-auto md:mx-0">
-                  <h1 className="text-3xl sm:text-4xl mb-1 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl mb-1 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
                     Professional Experience
                   </h1>
-                  <div className="space-y-1 text-gray-100 text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-2 text-gray-100 text-xs sm:text-sm md:text-base leading-relaxed">
                     {/* ...existing experience content... */}
                     <div>
                       <span className="font-bold text-lg">FLOATY</span>
