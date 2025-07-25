@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -29,7 +28,8 @@ function ProjectLayout({ image, title, description, direction }: ProjectLayoutPr
             alt={title}
             fill
             className="object-cover rounded-md transition-transform duration-300 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            // sizes="(max-width: 768px) 100vw, 33vw"
+            
           />
         </div>
 
