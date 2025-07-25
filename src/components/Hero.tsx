@@ -14,7 +14,7 @@ const pageVariants = {
 
 const pageTransition = {
   // type: "tween",
-  ease: "easeInOut",
+  ease: "easeInOut" as const,
   duration: 0.8,
 };
 function Hero() {
