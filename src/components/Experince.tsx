@@ -20,7 +20,7 @@ function Experince() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="w-full max-w-2xl mx-auto"
             >
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold underline underline-offset-8 tracking-tight text-gray-100 mb-4 sm:mb-6">
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-2 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
                 Professional Experience
               </h1>
 

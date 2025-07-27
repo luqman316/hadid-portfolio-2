@@ -1,0 +1,66 @@
+export const projects = [
+  {
+    title: "Azure Dungeon Survivor",
+    slug: "azure-dungeon-survivor",
+    image: "/game1/img1.jpg",
+    description: "A fantasy RPG adventure...",
+    tags: ["RPG", "Adventure"],
+  },
+  {
+    title: "Children Educational Game",
+    slug: "children-educational-game",
+    image: "/game2/img1.jpg",
+    description: "A fun cartoon children game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+  {
+    title: "Triple Hand Poker",
+    slug: "triplehandpoker-multiplayer-cardsgame",
+    image: "/game3/img1.jpg",
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+  {
+    title: "Ninja Hero Shadow Warrior",
+    slug: "ninja-hero-shadow-warrior",
+    image: "/game4/img1.jpg",
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+  {
+    title: "SkyBorne Legacy",
+    slug: "skyborne-legacy",
+    image: "/game5/img1.jpg",
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+  {
+    title: "Funny Shooter Bro",
+    slug: "funny-shooter-bro",
+    image: "/game6/img1.jpg",
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+  {
+    title: "CyAnimation-Beatemup",
+    slug: "cyanimation-beatemup",
+    image: "/game7/img1.jpg",
+
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+  {
+    title: "Satan's Revival",
+    slug: "satans-revival",
+    image: "/game8/img1.jpg",
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+   {
+    title: "The Zombie Apocalypse",
+    slug: "the-zombie-apocalypse",
+    image: "/game9/img1.jpg",
+    description: "A fun cartoon shooting game...",
+    tags: ["Shooter", "Multiplayer"],
+  },
+];

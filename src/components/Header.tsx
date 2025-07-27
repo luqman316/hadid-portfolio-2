@@ -6,10 +6,10 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navLinks = [
     { name: "Home", href: "/" }, 
-    { name: "Work", href: "/" },
-    { name: "Contact", href: "/" },
+    { name: "Work", href: "/work" },
+    { name: "Contact", href: "/contact" },
     { name: "Resume", href: "/resume" },
-    { name: "SignIn", href: "/about" },
+    // { name: "SignIn", href: "/about" },
   ];
 
   return (

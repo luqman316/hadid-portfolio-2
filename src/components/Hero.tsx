@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import VideoSection from "./VideoSection";
+import Link from "next/link";
 
 const pageVariants = {
   initial: { opacity: 0, y: 50 },
@@ -29,7 +30,7 @@ function Hero() {
           transition={pageTransition}
           key="main-page"
         >
-          <div className="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-00 min-h-[400px] text-black py-5 overflow-x-hidden">
+          <div className=" min-h-[400px] text-black py-5 overflow-x-hidden">
             <div className="container mx-auto px-2 sm:px-4 w-full">
               <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10 py-5 mt-2 md:mt-5 items-center w-full">
                 {/* first div: always first on mobile, left on desktop */}
@@ -68,7 +69,9 @@ function Hero() {
                   {/* buttons */}
                   <div className="flex flex-col xs:flex-row gap-2 xs:gap-4 mt-4">
                     <button className="flex items-center gap-2 hover:cursor-pointer hover:text-black px-4 py-2 xs:px-5 xs:py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-yellow-900 to-yellow-500 text-white rounded-md transition duration-300 text-xs xs:text-sm sm:text-base w-full xs:w-auto">
-                      View My Work
+                      <Link href="/work" className="flex items-center gap-2">
+                        View My Work
+                      </Link>
                       <span>
                         <FaArrowRight className="text-black" />
                       </span>
@@ -83,7 +86,7 @@ function Hero() {
                 </div>
 
                 {/* second div: always second on mobile, right on desktop */}
-                <div className="text-black border border-l-red-300 border-t-red-300 border-b-red-300 border-r-transparent rounded-l-full p-0 flex order-2 md:order-2 w-full h-full justify-center items-center min-h-[180px] sm:min-h-[260px] md:min-h-[320px] lg:min-h-[380px] overflow-x-hidden">
+                <div className="text-black border border-l-red-500 border-t-red-500 border-b-red-500 border-r-transparent rounded-l-full p-0 flex order-2 md:order-2 w-full h-full justify-center items-center min-h-[180px] sm:min-h-[260px] md:min-h-[320px] lg:min-h-[380px] overflow-x-hidden">
                   {/* video */}
                   <div className="w-full h-full flex items-center justify-center overflow-x-hidden">
                     <VideoSection />

@@ -1,3 +1,5 @@
+// import Clients from "@/components/Clients";
+import Clients from "@/components/Clients";
 import CoreExpertise from "@/components/CoreExpertise";
 import Experince from "@/components/Experince";
 import Hero from "@/components/Hero";
@@ -9,29 +11,25 @@ import Summary from "@/components/Summary";
 function MainPage() {
   return (
     <>
-     <Hero /> <br /> <br />
+      <Hero /> <br /> <br />
       <div>
-        <Summary />{" "}
-        <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />
-        <CoreExpertise />{" "}
-        <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
-        <Experince />
+      <Summary />{" "}
+      <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />
+      <CoreExpertise />{" "}
+      <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
+      <Experince />
       </div>{" "}
       <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
-    
-      <ProjectNum/>
+      <ProjectNum />
       <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
-      <Projects />
-      <br /> 
-      {/* <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" /> */}
-
-      
+      {/* Show only 8 projects on main page */}
+      <Projects limit={8} />
+      <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
+      <Clients />
     </>
   );
 }
 
 export default MainPage;
-
-
 
 // update the image locations @ is src as default to update to root change the tsconfig.ts paths

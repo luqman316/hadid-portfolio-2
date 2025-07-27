@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   FaBolt,
   FaCode,
@@ -7,7 +8,6 @@ import {
   FaNetworkWired,
   FaPuzzlePiece,
   FaUnity,
-  FaUsers,
 } from "react-icons/fa";
 import { SiUnrealengine, SiVirtualbox } from "react-icons/si";
 
@@ -69,11 +69,11 @@ const highlights = [
       <FaBolt className="text-2xl sm:text-3xl lg:text-4xl text-yellow-500" />
     ),
   },
-  {
-    title: "Leadership & Team Management",
-    description: "Led teams of 5 to 20 developers, driving decisions.",
-    icon: <FaUsers className="text-2xl sm:text-3xl lg:text-4xl text-red-500" />,
-  },
+  // {
+  //   title: "Leadership & Team Management",
+  //   description: "Led teams of 5 to 20 developers, driving decisions.",
+  //   icon: <FaUsers className="text-2xl sm:text-3xl lg:text-4xl text-red-500" />,
+  // },
 ];
 
 function CoreExpertise() {
@@ -92,7 +92,7 @@ function CoreExpertise() {
             Core Expertise
           </h1>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-6 mt-4 sm:mt-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 gap-2 sm:gap-3 md:gap-6 mt-4 sm:mt-6">
             {highlights.map((item, index) => (
               <motion.div
                 key={index}
@@ -121,7 +121,7 @@ function CoreExpertise() {
         </motion.div>
 
         {/* Right: Floating Words */}
-        <motion.div
+        {/* <motion.div
           initial={{ x: 80, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -141,9 +141,7 @@ function CoreExpertise() {
               transition: { duration: 0.2 },
             }}
             className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-red-500 to-orange-500 drop-shadow-md hover:drop-shadow-2xl transition-all duration-300"
-          >
-            Core
-          </motion.h1>
+          ></motion.h1>
 
           <motion.p
             animate={{ y: [0, -10, 0] }}
@@ -161,7 +159,35 @@ function CoreExpertise() {
           >
             expertise
           </motion.p>
-        </motion.div>
+        </motion.div> */}
+        
+        <motion.div
+                      initial={{ x: 100, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                      className="rounded-md flex justify-center w-full"
+                    >
+                      <motion.div
+                        animate={{
+                          y: [0, -10, 0],
+                        }}
+                        transition={{
+                          duration: 2,
+                          ease: "easeInOut",
+                          repeat: Infinity,
+                        }}
+                        className="w-full flex justify-center"
+                      >
+                        <Image
+                          src="/ce.jpg"
+                          alt="Professional Experience"
+                          width={400}
+                          height={400}
+                          className="rounded-md shadow-xl shadow-gray-500/20 hover:shadow-purple-500/40 transition-all w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                        />
+                      </motion.div>
+                    </motion.div>
       </div>
     </div>
   );
