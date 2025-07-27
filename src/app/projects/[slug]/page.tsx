@@ -2,9 +2,10 @@ import { projects } from "@/data/projects";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-interface ProjectPageProps {
+type ProjectPageProps = {
   params: { slug: string };
-}
+  searchParams?: Record<string, string | string[] | undefined>;
+};
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
