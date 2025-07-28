@@ -77,7 +77,9 @@ function Hero() {
                       </span>
                     </button>
                     <button className="flex items-center gap-2 hover:cursor-pointer border border-black px-4 py-2 xs:px-5 xs:py-2 sm:px-6 sm:py-3 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition duration-300 text-xs xs:text-sm sm:text-base w-full xs:w-auto">
-                      Contact Me
+                      <Link href="/contact" className="flex items-center gap-2">
+                        Contact Me
+                      </Link>
                       <span>
                         <MdEmail className="text-black" />
                       </span>
