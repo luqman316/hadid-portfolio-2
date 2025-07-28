@@ -11,7 +11,8 @@ import Summary from "@/components/Summary";
 function MainPage() {
   return (
     <>
-      <Hero /> <br /> <br />
+      <Hero />
+      <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />
       <div>
       <Summary />{" "}
       <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />

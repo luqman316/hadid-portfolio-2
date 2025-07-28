@@ -160,34 +160,34 @@ function CoreExpertise() {
             expertise
           </motion.p>
         </motion.div> */}
-        
+
         <motion.div
-                      initial={{ x: 100, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.8, ease: "easeInOut" }}
-                      className="rounded-md flex justify-center w-full"
-                    >
-                      <motion.div
-                        animate={{
-                          y: [0, -10, 0],
-                        }}
-                        transition={{
-                          duration: 2,
-                          ease: "easeInOut",
-                          repeat: Infinity,
-                        }}
-                        className="w-full flex justify-center"
-                      >
-                        <Image
-                          src="/ce.jpg"
-                          alt="Professional Experience"
-                          width={400}
-                          height={400}
-                          className="rounded-md shadow-xl shadow-gray-500/20 hover:shadow-purple-500/40 transition-all w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
-                        />
-                      </motion.div>
-                    </motion.div>
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="rounded-md flex justify-center w-full"
+        >
+          <motion.div
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+            className="w-full flex justify-center"
+          >
+            <Image
+              src="/ce.jpg"
+              alt="Professional Experience"
+              width={400}
+              height={400}
+              className="rounded-md shadow-xl shadow-gray-500/20 hover:shadow-purple-500/40 transition-all w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
