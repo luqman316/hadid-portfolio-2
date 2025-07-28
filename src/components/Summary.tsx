@@ -61,7 +61,7 @@ function Summary() {
               <h2 className="text-sm sm:text-lg md:text-xl font-medium text-white mb-2 sm:mb-3">
                 Senior Game Developer | AI Enthusiast | Team Leader
               </h2>
-              <p className="text-xs sm:text-base md:text-lg text-gray-400 hover:text-white transition-colors duration-200">
+              <p className="text-xs sm:text-base sm:text-white md:text-lg text-gray-400 hover:text-white transition-colors duration-200">
                 With 7+ years of experience in Unity3D and C#, I specialize in
                 game programming, scalable architectures, and performance
                 optimization. I’ve worked across mobile, PC, and multiplayer

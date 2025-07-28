@@ -43,7 +43,7 @@ function ProjectLayout({
         </h3>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm md:text-base text-indigo-300 group-hover:text-white min-h-[3rem] sm:min-h-[4rem]">
+        <p className="text-xs sm:text-sm md:text-base text-indigo-300 group-hover:text-white min-h-[3rem] sm:min-h-[4rem] line-clamp-1 overflow-hidden">
           {description}
         </p>
       </div>

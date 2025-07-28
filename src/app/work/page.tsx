@@ -3,9 +3,7 @@ import ProjectLayout from "@/components/ProjectLayout";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import Link from "next/link";
-// import ProjectLayout from "./ProjectLayout";
 
-// projects are now imported from @/data/projects
 function WorkPage() {
   return (
     <motion.div
@@ -25,7 +23,7 @@ function WorkPage() {
             className="block"
           >
             <ProjectLayout
-              image={project.image}
+              image={Array.isArray(project.image) ? project.image[0] : project.image}
               title={project.title}
               description={project.description}
               direction={index % 2 === 0 ? "left" : "right"}

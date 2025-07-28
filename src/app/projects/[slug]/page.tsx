@@ -1,130 +1,23 @@
-// import { projects } from "@/data/projects";
-// import Image from "next/image";
-// import { notFound } from "next/navigation";
-
-// export function generateStaticParams() {
-//   return projects.map((project) => ({ slug: project.slug }));
-// }
-
-// type Props = {
-//   params: {
-//     slug: string;
-//   };
-// }
-// export default async function ProjectPage({ params }: Props) {
-//   const project = projects.find((p) => p.slug === params.slug);
-//   if (!project) return notFound();
-
-//   return (
-//     <div className="container mx-auto px-4 py-8">
-//       <div className="max-w-3xl text-white ">
-//         <h1 className="text-3xl  font-bold mb-4">{project.title}</h1>
-//         <Image
-//           src={project.image}
-//           alt={project.title}
-//           width={800}
-//           height={400}
-//           className="rounded-md w-full flex flex-col justify-center items-center h-auto object-cover mb-4"
-//         />
-//         <p className="mt-2 text-gray-300 mb-4">{project.description}</p>
-//         <div className="flex flex-wrap gap-2">
-//           {project.tags?.map((tag: string) => (
-//             <span
-//               key={tag}
-//               className="bg-gray-700 text-white text-sm px-2 py-1 rounded"
-//             >
-//               {tag}
-//             </span>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// import Image from "next/image";
-// import { notFound } from "next/navigation";
-
-// // ✅ generateStaticParams inside function (with inline data)
-// export async function generateStaticParams() {
-//   const projects = await getProjects(); // move data fetching inside
-//   return projects.map((project) => ({ slug: project.slug }));
-// }
-
-// // ✅ Metadata workaround — works if data is fetched properly
-
-// export async function generateMetadata(props: { params: { slug: string } }) {
-//   const params = await props.params;
-//   const projects = await getProjects();
-//   const project = projects.find((p) => p.slug === params.slug);
-//   if (!project) return {};
-//   return {
-//     title: project.title,
-//     description: project.description,
-//   };
-// }
-
-// // ✅ Page Props
-// type PageProps = {
-//   params: {
-//     slug: string;
-//   };
-// };
-
-// // ✅ Page Component
-
-// export default async function ProjectPage({ params }: PageProps) {
-//   const projects = await getProjects();
-//   const project = projects.find((p) => p.slug === params.slug);
-//   if (!project) return notFound();
-
-//   return (
-//     <div className="container mx-auto px-4 py-8">
-//       <div className="max-w-3xl text-white">
-//         <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-//         <Image
-//           src={project.image}
-//           alt={project.title}
-//           width={800}
-//           height={400}
-//           className="rounded-md w-full h-auto object-cover mb-4"
-//         />
-//         <p className="mt-2 text-gray-300 mb-4">{project.description}</p>
-//         <div className="flex flex-wrap gap-2">
-//           {project.tags?.map((tag: string) => (
-//             <span
-//               key={tag}
-//               className="bg-gray-700 text-white text-sm px-2 py-1 rounded"
-//             >
-//               {tag}
-//             </span>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// // ✅ Helper to fetch projects data (simulate static file)
-// async function getProjects() {
-//   const { projects } = await import("@/data/projects");
-//   return projects;
-// }
-
-
-
-
 "use client";
-
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-
+import { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../../components/ui/carousel";
+const autoplayPlugin = Autoplay({ delay: 2000 });
 type Project = {
   slug: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  images?: string[];
+  videos?: string[];
   tags?: string[];
 };
 
@@ -135,34 +28,102 @@ export default function ProjectPage() {
   useEffect(() => {
     async function fetchProject() {
       const { projects } = await import("@/data/projects");
-      const found = projects.find((p: Project) => p.slug === params.slug);
+      const found = projects.find((p) => p.slug === params.slug);
       if (found) {
-        setProject(found);
+        // Normalize: if 'image' is an array, move to 'images' and pick first for 'image'
+        const normalized: Project = {
+          ...found,
+          images: Array.isArray(found.image)
+            ? (found.image as string[])
+            : found.image
+            ? [found.image]
+            : undefined,
+          image: Array.isArray(found.image)
+            ? (found.image as string[])[0] ?? ""
+            : typeof found.image === "string"
+            ? found.image
+            : "",
+        };
+        setProject(normalized);
       }
     }
-
     fetchProject();
   }, [params.slug]);
 
   if (!project) return <div className="text-white">Loading...</div>;
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-3xl text-white">
-        <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={800}
-          height={400}
-          className="rounded-md w-full h-auto object-cover mb-4"
-        />
-        <p className="mt-2 text-gray-300 mb-4">{project.description}</p>
+    <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-14 lg:py-20">
+      <div className="text-white w-full max-w-4xl mx-auto">
+        <h1 className="text-xl xs:text-2xl sm:text-4xl md:text-5xl font-extrabold underline underline-offset-8 mb-3 sm:mb-4 text-balance break-words">
+          {project.title}
+        </h1>
+
+        {/* Multiple Images Carousel */}
+        {project.images && project.images.length > 0 && (
+          <Carousel
+            plugins={[autoplayPlugin]}
+            className="w-full overflow-hidden mt-4"
+          >
+            <CarouselContent>
+              {project.images.map((img, i) => (
+                <CarouselItem key={i}>
+                  <div className="relative w-full h-[220px] xs:h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]">
+                    <Image
+                      src={img}
+                      alt={`${project.title} image ${i + 1}`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      quality={100}
+                      className="rounded-md"
+                      priority={i === 0}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="!left-2 sm:!left-4 !bg-white !text-black !shadow-md hover:!bg-gray-100" />
+            <CarouselNext className="!right-2 sm:!right-4 !bg-white !text-black !shadow-md hover:!bg-gray-100" />
+          </Carousel>
+        )}
+
+        {/* Single fallback image if no images array */}
+        {!project.images && project.image && (
+          <div className="relative w-full h-[220px] xs:h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] mb-4">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              style={{ objectFit: "cover" }}
+              quality={100}
+              className="rounded-md"
+              priority
+            />
+          </div>
+        )}
+
+        {/* Multiple Videos */}
+        {project.videos && project.videos.length > 0 && (
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-4">
+            {project.videos.map((vid, i) => (
+              <video
+                key={i}
+                src={vid}
+                controls
+                className="rounded-md w-full sm:w-[350px] md:w-[400px] lg:w-[500px] max-h-[350px] object-cover"
+              />
+            ))}
+          </div>
+        )}
+
+        <p className="mt-2 text-gray-300 text-balance mb-4 text-base sm:text-lg md:text-xl">
+          {project.description}
+        </p>
         <div className="flex flex-wrap gap-2">
           {project.tags?.map((tag: string) => (
             <span
               key={tag}
-              className="bg-gray-700 text-white text-sm px-2 py-1 rounded"
+              className="bg-gray-700 text-white text-xs sm:text-sm px-2 py-1 rounded"
             >
               {tag}
             </span>

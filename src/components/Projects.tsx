@@ -29,7 +29,7 @@ function Projects({ limit }: ProjectsProps) {
               className="block"
             >
               <ProjectLayout
-                image={project.image}
+                image={Array.isArray(project.image) ? project.image[0] : project.image}
                 title={project.title}
                 description={project.description}
                 direction={index % 2 === 0 ? "left" : "right"}
