@@ -54,7 +54,7 @@ export default function ProjectPage() {
 
   return (
     <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-14 lg:py-20">
-      <div className="text-white w-full max-w-4xl mx-auto">
+      <div className="text-white w-full  ">
         <h1 className="text-xl xs:text-2xl sm:text-4xl md:text-5xl font-extrabold underline underline-offset-8 mb-3 sm:mb-4 text-balance break-words">
           {project.title}
         </h1>
@@ -68,7 +68,7 @@ export default function ProjectPage() {
             <CarouselContent>
               {project.images.map((img, i) => (
                 <CarouselItem key={i}>
-                  <div className="relative w-full h-[220px] xs:h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]">
+                  <div className="relative w-full h-[220px] xs:h-[300px] mt-4  sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]">
                     <Image
                       src={img}
                       alt={`${project.title} image ${i + 1}`}
