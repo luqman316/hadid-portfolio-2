@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import ProjectNum from "@/components/ProjectNum";
 import Projects from "@/components/Projects";
 import Summary from "@/components/Summary";
+import ThreeDViewer from "@/components/ThreeDViewer";
 // import Summary from "@/components/Summary";
 
 function MainPage() {
@@ -14,11 +15,11 @@ function MainPage() {
       <Hero />
       <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />
       <div>
-      <Summary />{" "}
-      <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />
-      <CoreExpertise />{" "}
-      <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
-      <Experince />
+        <Summary />{" "}
+        <hr className=" container mx-auto mt-4 text-gray-500 opacity-20" />
+        <CoreExpertise />{" "}
+        <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
+        <Experince />
       </div>{" "}
       <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
       <ProjectNum />
@@ -27,6 +28,15 @@ function MainPage() {
       <Projects limit={8} />
       <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
       <Clients />
+      {/* <hr className=" container mx-auto text-gray-500 mt-4 opacity-20" />
+      <section className="py-10 px-4 container mx-auto">
+        <h2 className="text-3xl font-bold mb-4">🔧 3D Product Viewer</h2>
+        <p className="mb-4 text-gray-600">
+          This section demonstrates a live integration of 3DCommerce.studio —
+          used for rendering interactive 3D models in eCommerce environments.
+        </p>
+        <ThreeDViewer />
+      </section> */}
     </>
   );
 }

@@ -24,7 +24,7 @@ function Experince() {
                 Professional Experience
               </h1>
 
-              <div className="space-y-4 sm:space-y-6 text-gray-100 text-xs sm:text-base md:text-lg leading-relaxed grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+              <div className="space-y-4 sm:space-y-6 mt-6 text-gray-100 text-xs sm:text-base md:text-lg leading-relaxed grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                 {/* Experience Items */}
                 <div>
                   <span className="font-bold text-base sm:text-lg">FLOATY</span>

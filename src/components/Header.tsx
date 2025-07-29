@@ -19,7 +19,7 @@ function Header() {
           {/* logo or name */}
           <div className="flex items-center gap-3">
             <Link href={"/"}>
-              <h1 className="text-xl md:text-2xl text-white font-bold cursor-pointer group relative">
+              <h1 className="text-xl md:text-2xl hover:text-blue-300 hover:animate-pulse text-white font-bold cursor-pointer group relative">
                 Hadid Ali
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full"></span>
               </h1>

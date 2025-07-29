@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import {
   Carousel,
   CarouselContent,
@@ -50,7 +51,12 @@ export default function ProjectPage() {
     fetchProject();
   }, [params.slug]);
 
-  if (!project) return <div className="text-white">Loading...</div>;
+  if (!project)
+    return (
+      <div className="text-white flex justify-center items-center">
+        <AiOutlineLoading3Quarters className="animate-spin" />
+      </div>
+    );
 
   return (
     <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-14 lg:py-20">
@@ -104,12 +110,15 @@ export default function ProjectPage() {
 
         {/* Multiple Videos */}
         {project.videos && project.videos.length > 0 && (
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-4">
+          <div className="grid grid-cols-2 sm:flex-row flex-wrap  w-full mt-10 gap-4 mb-4">
             {project.videos.map((vid, i) => (
               <video
                 key={i}
                 src={vid}
-                controls
+                // controls
+                loop
+                autoPlay
+                muted
                 className="rounded-md w-full sm:w-[350px] md:w-[400px] lg:w-[500px] max-h-[350px] object-cover"
               />
             ))}
