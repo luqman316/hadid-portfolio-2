@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import ProjectNum from "@/components/ProjectNum";
 import Projects from "@/components/Projects";
 import Summary from "@/components/Summary";
-import ThreeDViewer from "@/components/ThreeDViewer";
 // import Summary from "@/components/Summary";
 
 function MainPage() {

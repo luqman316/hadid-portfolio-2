@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../../components/ui/carousel";
-const autoplayPlugin = Autoplay({ delay: 2000 });
+const autoplayPlugin = Autoplay({ delay: 6000 });
 type Project = {
   slug: string;
   title: string;
@@ -61,7 +61,7 @@ export default function ProjectPage() {
   return (
     <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-14 lg:py-20">
       <div className="text-white w-full  ">
-        <h1 className="text-xl xs:text-2xl sm:text-4xl md:text-5xl font-extrabold underline underline-offset-8 mb-3 sm:mb-4 text-balance break-words">
+        <h1 className="text-xl xs:text-2xl text-amber-500 sm:text-4xl md:text-5xl font-extrabold underline underline-offset-8 mb-3 sm:mb-4 text-balance break-words">
           {project.title}
         </h1>
 
@@ -69,7 +69,7 @@ export default function ProjectPage() {
         {project.images && project.images.length > 0 && (
           <Carousel
             plugins={[autoplayPlugin]}
-            className="w-full overflow-hidden mt-4"
+            className="w-full overflow-hidden shadow-2xl px-14 mt-4"
           >
             <CarouselContent>
               {project.images.map((img, i) => (
@@ -108,26 +108,31 @@ export default function ProjectPage() {
           </div>
         )}
 
+        <p className="text-gray-300 text-balance mt-6 mb-4 text-base sm:text-lg md:text-xl">
+          {project.description}
+        </p>
+
         {/* Multiple Videos */}
         {project.videos && project.videos.length > 0 && (
-          <div className="grid grid-cols-2 sm:flex-row flex-wrap  w-full mt-10 gap-4 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 w-full mt-8 mb-4">
             {project.videos.map((vid, i) => (
-              <video
+              <div
                 key={i}
-                src={vid}
-                // controls
-                loop
-                autoPlay
-                muted
-                className="rounded-md w-full sm:w-[350px] md:w-[400px] lg:w-[500px] max-h-[350px] object-cover"
-              />
+                className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[350px] rounded-md overflow-hidden"
+              >
+                <video
+                  src={vid}
+                  loop
+                  autoPlay
+                  muted
+                  // controls
+                  className="w-full h-full object-cover rounded-md"
+                />
+              </div>
             ))}
           </div>
         )}
 
-        <p className="mt-2 text-gray-300 text-balance mb-4 text-base sm:text-lg md:text-xl">
-          {project.description}
-        </p>
         <div className="flex flex-wrap gap-2">
           {project.tags?.map((tag: string) => (
             <span
