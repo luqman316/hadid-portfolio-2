@@ -1,6 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const containerVariants = {
@@ -76,7 +77,7 @@ function Summary() {
               variants={rightVariants}
               transition={{ duration: 1, ease: "easeInOut" }}
             >
-              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl flex items-center justify-center bg-black/30">
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl relative bg/30">
                 {isMobile ? (
                   <Image
                     src="/about4.jpg"
@@ -86,17 +87,34 @@ function Summary() {
                     className="w-full h-full object-cover rounded-lg"
                   />
                 ) : (
-                  <video
-                    preload="none"
-                    autoPlay
-                    muted
-                    // controls
-                    loop
-                    className="w-full h-full object-cover"
-                    src="/ab1.mp4"
+                  <Link
+                    href="https://www.youtube.com/watch?v=u7ktVHkd8DI"
+                    target="_blank"
+                    className="block w-full h-full"
                   >
-                    Your browser does not support the video tag.
-                  </video>
+                    <Image
+                      src="/aboutME/abms.png"
+                      alt="About Me"
+                      width={400}
+                      height={225}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    {/* 🔽 Play Icon Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                      <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-8 h-8 text-black"
+                          fill="currentColor"
+                          viewBox="0 0 84 84"
+                        >
+                          <polygon
+                            points="30,24 60,42 30,60"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </Link>
                 )}
               </div>
             </motion.div>
@@ -108,3 +126,49 @@ function Summary() {
 }
 
 export default Summary;
+
+// <video
+//   preload="none"
+//   autoPlay
+//   muted
+//   // controls
+//   loop
+//   className="w-full h-full object-cover"
+//   src="/ab1.mp4"
+// >
+//   Your browser does not support the video tag.
+// </video>
+
+{
+  /* <motion.div
+              className="w-full max-w-xl mx-auto"
+              variants={rightVariants}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl flex items-center justify-center bg/30">
+                {isMobile ? (
+                  <Image
+                    src="/about4.jpg"
+                    alt="About Me"
+                    width={400}
+                    height={225}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                ) : (
+                  <Link
+                    href="https://www.youtube.com/watch?v=u7ktVHkd8DI"
+                    target="_blank"
+                    className="w-full h-full object-cover rounded-lg"
+                  >
+                    <Image
+                      src="/aboutME/abms.png"
+                      alt="About Me"
+                      width={400}
+                      height={225}
+                      className="w-full h-full"
+                    />
+                  </Link>
+                )}
+              </div>
+            </motion.div> */
+}
