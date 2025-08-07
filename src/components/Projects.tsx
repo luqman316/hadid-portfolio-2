@@ -35,10 +35,7 @@ function Projects({ limit }: ProjectsProps) {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <div
       className="container mx-auto px-2 sm:px-4 py-6 sm:py-8 text-white"
     >
       <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-2 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
@@ -73,7 +70,7 @@ function Projects({ limit }: ProjectsProps) {
           </p>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

@@ -18,10 +18,7 @@ function ProjectLayout({
   const isLeft = direction === "left";
 
   return (
-    <motion.div
-      initial={{ x: isLeft ? -80 : 80, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      viewport={{ once: true }}
+    <div
       className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 cursor-pointer group transition-all duration-200 h-[400px] sm:h-[450px] md:h-[500px]"
     >
       <div className="p-2 sm:p-4 flex flex-col h-full relative">
@@ -53,7 +50,7 @@ function ProjectLayout({
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
