@@ -47,13 +47,15 @@
   :root {
     /* --background: #c0c0c0; */
     /* --background: #ffffff; */
-
   }
 }
 
 body {
   overflow-x: hidden;
-  background-color: #1f1f1f;
+  /* background-color: #1f1f1f; */
+  /* background-color: #0F172A; */
+  background: linear-gradient(to left, #1E1E2F 0%, #000000 100%);
+  /* background-color: linear-gradient(to left, #2a2a37, #000000); */
 }
 
 :root {

@@ -1,11 +1,12 @@
 function Footer() {
   return (
+    // swd: Footer component for the website
     <footer className="w-full text-gray-300 py-8 mt-12 border-t border-gray-700">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-sm text-center md:text-left flex-1">
           &copy; {new Date().getFullYear()}{" "}
-          <span className="font-semibold text-indigo-400"></span>. All
-          rights reserved.
+          <span className="font-semibold text-indigo-400"></span>. All rights
+          reserved.
         </div>
         <div className="flex flex-wrap gap-4 text-base justify-center md:justify-end items-center flex-1">
           <a

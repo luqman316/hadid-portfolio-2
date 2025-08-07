@@ -18,7 +18,7 @@ function Clients() {
     <>
       <div className="w-full flex flex-col container mx-auto px-2 py-8 sm:py-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 sm:mb-8 underline underline-offset-8 tracking-tight">
-          OUR CLIENTS
+          CLIENTS
         </h2>
         <div className="w-full max-w-6xl mx-auto px-2 sm:px-4">
           <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-6 sm:gap-y-10">
