@@ -2,7 +2,9 @@
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import ProjectLayout from "./ProjectLayout";
+import { ProjectGridSkeleton } from "./ProjectSkeleton";
 
 // projects are now imported from @/data/projects
 type ProjectsProps = {
@@ -10,6 +12,28 @@ type ProjectsProps = {
 };
 
 function Projects({ limit }: ProjectsProps) {
+  const [isLoading, setIsLoading] = useState(true);
+  // const projectList = limit ? projects.slice(0, limit) : projects;
+
+  // const autoplayPlugin = Autoplay({ delay: 4000 });
+
+  useEffect(() => {
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 sm:px-6 py-6 text-white">
+        <ProjectGridSkeleton count={limit || 4} />
+      </div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,7 +53,11 @@ function Projects({ limit }: ProjectsProps) {
               className="block"
             >
               <ProjectLayout
-                image={Array.isArray(project.image) ? project.image[0] : project.image}
+                image={
+                  Array.isArray(project.image)
+                    ? project.image[0]
+                    : project.image
+                }
                 title={project.title}
                 description={project.description}
                 direction={index % 2 === 0 ? "left" : "right"}
