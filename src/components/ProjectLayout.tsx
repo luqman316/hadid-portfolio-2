@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -18,9 +19,7 @@ function ProjectLayout({
   const isLeft = direction === "left";
 
   return (
-    <div
-      className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 cursor-pointer group transition-all duration-200 h-[400px] sm:h-[450px] md:h-[500px]"
-    >
+    <div className="rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 cursor-pointer group transition-all duration-200 h-[400px] sm:h-[450px] md:h-[500px]">
       <div className="p-2 sm:p-4 flex flex-col h-full relative">
         {/* Image Container */}
         <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden rounded-md z-10">

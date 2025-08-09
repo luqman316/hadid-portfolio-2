@@ -104,7 +104,9 @@ export default function ProjectPageClient(project: Project) {
                 <video
                   src={vid}
                   loop
-                  autoPlay
+                  autoPlay={
+                    typeof window !== "undefined" && window.innerWidth >= 640
+                  }
                   muted
                   className="w-full h-full object-cover rounded-md"
                 />

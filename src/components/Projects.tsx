@@ -1,6 +1,5 @@
 "use client";
 import { projects } from "@/data/projects";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ProjectLayout from "./ProjectLayout";
@@ -35,9 +34,7 @@ function Projects({ limit }: ProjectsProps) {
   }
 
   return (
-    <div
-      className="container mx-auto px-2 sm:px-4 py-6 sm:py-8 text-white"
-    >
+    <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-8 text-white">
       <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-2 font-extrabold underline underline-offset-8 tracking-tight text-gray-100">
         Projects
       </h1>
